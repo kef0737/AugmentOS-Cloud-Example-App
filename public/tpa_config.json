@@ -1,0 +1,78 @@
+{
+  "name": "Assist",
+  "description": "Assistant for glasses.\n\nUI: https://jarvis-online.netlify.app\n\nAPI Key: Obtain from settings > profile on the main interface.\n\nSpeed: Higher speed = Lower Quality",
+  "publicUrl": "https://quagga-settled-hopefully.ngrok-free.app",
+  "logoURL": "https://jarvis-online.netlify.app/Logo.png",
+  "permissions": [
+    {
+      "type": "MICROPHONE",
+      "description": "transcribe inputs"
+    },
+    {
+      "type": "LOCATION",
+      "description": "Send location data to jarvis for more accurate results in some scenarios."
+    }
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "key": "",
+      "label": "",
+      "title": "Config"
+    },
+    {
+      "type": "select",
+      "key": "server",
+      "label": "Server",
+      "defaultValue": "prod",
+      "options": [
+        {
+          "label": "Development",
+          "value": "dev"
+        },
+        {
+          "label": "Production",
+          "value": "prod"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "key": "api_key",
+      "label": "API Key",
+      "defaultValue": ""
+    },
+    {
+      "type": "select",
+      "key": "model",
+      "label": "Speed [can also affect quality]",
+      "defaultValue": "groq",
+      "options": [
+        {
+          "label": "Turbo",
+          "value": "groq"
+        },
+        {
+          "label": "Base",
+          "value": "gemini"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "key": "",
+      "label": "",
+      "title": "Prefrences"
+    },
+    {
+      "type": "slider",
+      "key": "wpm",
+      "label": "Words Per minute",
+      "defaultValue": 100,
+      "min": 1,
+      "max": 200
+    }
+  ],
+  "tools": [],
+  "webviewURL": "https://jarvis-online.netlify.app"
+}
